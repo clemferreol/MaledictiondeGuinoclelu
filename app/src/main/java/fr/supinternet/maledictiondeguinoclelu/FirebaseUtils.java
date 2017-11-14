@@ -57,18 +57,23 @@ public class FirebaseUtils {
         return currentUser == null ? null : currentUser.getUid();
     }
 
-    public static void login(String email, String password, OnCompleteListener<AuthResult> listener) {
-        FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password).addOnCompleteListener(listener);
-    }
-
     public static DatabaseReference getRef(){
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         return database.getReference();
     }
 
-    /*private static void retrieveUsername(ValueEventListener listener){
+
+    private static void retrieveUsername(ValueEventListener listener){
         String uid = getUid();
         getRef().child("users").child(uid).child("name").addListenerForSingleValueEvent(listener);
-    }*/
+    }
+
+    public static void login(String email, String password, OnCompleteListener<AuthResult> listener) {
+        FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password).addOnCompleteListener(listener);
+    }
+
+    public static void getProfile(ValueEventListener listener) {
+        getRef().child("users").child(getUid()).addListenerForSingleValueEvent(listener);
+    }
 
 }

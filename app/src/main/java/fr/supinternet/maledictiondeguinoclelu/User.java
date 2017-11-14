@@ -5,10 +5,11 @@ package fr.supinternet.maledictiondeguinoclelu;
  */
 public class User {
 
-
     protected String name;
     protected String email;
 
+    public User() {
+    }
 
     public User(String name, String email){
         this.name = name;

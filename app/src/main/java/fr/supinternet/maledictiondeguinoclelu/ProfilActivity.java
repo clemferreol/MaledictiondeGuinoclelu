@@ -12,6 +12,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -83,8 +84,7 @@ public class ProfilActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     private void setDataToView(FirebaseUser user) {
-        email.setText("User Email: " + user.getEmail());
-        name.setText("User name: " + user.getDisplayName());
+        getProfile();
     }
 
     @Override
@@ -99,6 +99,23 @@ public class ProfilActivity extends AppCompatActivity {
         if (authListener != null) {
             auth.removeAuthStateListener(authListener);
         }
+    }
+
+    private void getProfile() {
+        FirebaseUtils.getProfile(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                User u = dataSnapshot.getValue(User.class);
+                email.setText("User Email: " + u.getEmail());
+                name.setText("User name: " + u.getName());
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 }
 
