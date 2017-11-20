@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/lCreateUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/etCreateUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter username"
+            android:inputType="text" />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/loading"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B4000000"
+        android:clickable="true"
+        android:gravity="center">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:indeterminate="true" />
+    </LinearLayout>
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="35dp"
+        android:text="RadioButton"
+        android:layout_below="@+id/lCreateUsername"
+        android:layout_toEndOf="@+id/loading" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="RadioButton"
+        android:layout_below="@+id/radioButton"
+        android:layout_alignStart="@+id/radioButton" />
+
+
+</RelativeLayout>

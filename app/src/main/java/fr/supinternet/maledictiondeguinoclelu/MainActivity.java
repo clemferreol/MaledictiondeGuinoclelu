@@ -19,17 +19,13 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAnalytics mFirebaseAnalytics;
     private static final String TAG = "LoginActivity";
-
     private EditText etSignupName;
     private EditText etSignupEmail;
     private EditText etSignupPassword;
-
     private EditText etLoginEmail;
     private EditText etLoginPassword;
-
     private Button btLogin;
     private Button btSignup;
-
     private View loading;
 
     @Override
@@ -37,29 +33,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
-
         FirebaseApp.initializeApp(this);
-
         findViews();
         setListeners();
-
-
-
+        login("test@test.com", "azerty");
     }
 
     private void findViews() {
-
         etSignupName = (EditText) findViewById(R.id.etSignupName);
         etSignupEmail = (EditText) findViewById(R.id.etSignupEmail);
         etSignupPassword = (EditText) findViewById(R.id.etSignupPassword);
-
         btSignup = (Button) findViewById(R.id.btSignup);
-
         etLoginEmail = (EditText) findViewById(R.id.etLoginEmail);
         etLoginPassword = (EditText) findViewById(R.id.etLoginPassword);
-
         btLogin = (Button) findViewById(R.id.btLogin);
-
         loading = findViewById(R.id.loading);
     }
 
@@ -69,10 +56,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (checkIfEditTextEmpty(etLoginEmail, "Specify an email")) return;
                 if (checkIfEditTextEmpty(etLoginPassword, "Specify a password")) return;
-
                 login(etLoginEmail.getText().toString(),
                         etLoginPassword.getText().toString());
-
                 Bundle bundle = new Bundle();
                 bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "EVENTS_LOGIN_PAGE");
                 bundle.putString("ENTRY_POINT", "SIGNIN");
@@ -87,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
                 if (checkIfEditTextEmpty(etSignupName, "Specify a name")) return;
                 if (checkIfEditTextEmpty(etSignupEmail, "Specify an email")) return;
                 if (checkIfEditTextEmpty(etSignupPassword, "Specify a password")) return;
-
                 signup(etSignupName.getText().toString(),
                         etSignupEmail.getText().toString(),
                         etSignupPassword.getText().toString());
@@ -98,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
                 bundle.putString("EMAIL_LENGTH", etSignupPassword.length() + "");
                 bundle.putString("PASSWORD_LENGTH", etSignupPassword.length() + "");
                 mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
-
             }
         });
     }
@@ -118,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    goToMessagesActivity();
+                    goToPersoActivity();
                 } else {
                     Toast.makeText(getBaseContext(), task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                     showLoading(false);
@@ -133,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task task) {
                 if (task.isSuccessful()) {
-                    goToMessagesActivity();
+                    goToPersoActivity();
                 } else {
                     Toast.makeText(getBaseContext(), task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                     showLoading(false);
@@ -143,14 +126,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showLoading(boolean show) {
-
         loading.setVisibility(show ? View.VISIBLE : View.GONE);
-
     }
 
-    private void goToMessagesActivity() {
+    private void goToPersoActivity() {
         showLoading(false);
-        Intent intent = new Intent(getBaseContext(), ProfilActivity.class);
+        Intent intent = new Intent(getBaseContext(), PersoActivity.class);
         startActivity(intent);
     }
 }
