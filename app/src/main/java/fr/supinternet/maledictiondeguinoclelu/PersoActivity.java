@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -37,68 +38,71 @@ public class PersoActivity extends AppCompatActivity {
 
     private DatabaseReference mDatabase;
     private View loading;
-    private String perso;
     private String username;
     private InputStream avatar;
     private String gender;
     private String race;
     private Button btCreate;
+    private EditText etUsername;
+    private RadioGroup rgGender;
+    private RadioGroup rgRace;
+    private String radioGenderValue;
+    private String radioRaceValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getProfile();
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        if(perso != null) {
-            setContentView(R.layout.activity_perso);
 
-            TextView usernameValue = (TextView) findViewById(R.id.etCreateUsername);
+        setContentView(R.layout.activity_create_perso);
 
-            //gender
-            RadioGroup rgGender = (RadioGroup)findViewById(R.id.radioGender);
-            String radioGenderValue = ((RadioButton)findViewById(rgGender.getCheckedRadioButtonId())).getText().toString();
+        loading = findViewById(R.id.loading);
+        etUsername = (EditText) findViewById(R.id.etCreateUsername);
 
-            //race
-            RadioGroup rgRace = (RadioGroup)findViewById(R.id.radioRace);
-            String radioRaceValue = ((RadioButton)findViewById(rgRace.getCheckedRadioButtonId())).getText().toString();
+        //gender
+        rgGender = (RadioGroup)findViewById(R.id.radioGender);
+        //radioGenderValue = ((RadioButton)findViewById(rgGender.getCheckedRadioButtonId())).getText().toString();
 
-            //avatar = (InputStream) findViewById(R.id.isavatar);
-            //setDataToView();
-        }else{
-            setContentView(R.layout.activity_create_perso);
-            /*
-            btCreate = (Button) findViewById(R.id.btCreate);
+        //race
+        rgRace = (RadioGroup)findViewById(R.id.radioRace);
+        // radioRaceValue = ((RadioButton)findViewById(rgRace.getCheckedRadioButtonId())).getText().toString();
 
-            btCreate.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (checkIfEditTextEmpty(etUsername, "Specify a username")) return;
+        //avatar = (InputStream) findViewById(R.id.isavatar);
+
+
+        btCreate = (Button) findViewById(R.id.btCreate);
+
+        btCreate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    /*if (checkIfEditTextEmpty(etUsername, "Specify a username")) return;
                     if (checkIfEditTextEmpty(etAvatar, "Specify an avatar")) return;
                     if (checkIfEditTextEmpty(etRace, "Specify a race")) return;
-                    if (checkIfEditTextEmpty(etgender, "Specify a gender")) return;
+                    if (checkIfEditTextEmpty(etgender, "Specify a gender")) return;*/
 
-                    createPerso(etUsername.getText().toString(),
-                            etAvatar.getText().toString(),
-                            etRace.getText().toString()),
-                            etgender.getText().toString()),
-                            ;
+                createPerso(etUsername.getText().toString(),
+                        //etAvatar.getText().toString(),
+                        ((RadioButton)findViewById(rgGender.getCheckedRadioButtonId())).getText().toString(),
+                        ((RadioButton)findViewById(rgRace.getCheckedRadioButtonId())).getText().toString());
 
-                    Bundle bundle = new Bundle();
-                    bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "EVENTS_LOGIN_PAGE");
-                    bundle.putString("ENTRY_POINT", "Create");
-                    mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
-                }
-            });*/
+                Bundle bundle = new Bundle();
+                bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "EVENTS_LOGIN_PAGE");
+                bundle.putString("ENTRY_POINT", "Create");
+                //mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+            }
+        });
 
-        }
     }
 
-    private void createPerso(String username, InputStream avatar, String gender, String race) {
+
+    private void createPerso(String username, /*InputStream avatar,*/ String gender, String race) {
         showLoading(true);
-        FirebaseUtils.createPerso(username, avatar, gender, race, new OnCompleteListener() {
+        FirebaseUtils.createPerso(username, /*avatar,*/ gender, race, new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull Task task) {
                 if (task.isSuccessful()) {
+                    goToPersoActivity();
                 } else {
                     Toast.makeText(getBaseContext(), task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                     showLoading(false);
@@ -119,7 +123,6 @@ public class PersoActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 User u = dataSnapshot.getValue(User.class);
-                perso = u.getUsername() != null ? u.getUsername() : null;
                 username = u.getUsername();
                 //avatar = u.getAvatar();
                 gender = u.getGender();
@@ -135,5 +138,11 @@ public class PersoActivity extends AppCompatActivity {
 
     private void showLoading(boolean show) {
         loading.setVisibility(show ? View.VISIBLE : View.GONE);
+    }
+
+    private void goToPersoActivity() {
+        showLoading(false);
+        Intent intent = new Intent(getBaseContext(), PersoActivity.class);
+        startActivity(intent);
     }
 }
