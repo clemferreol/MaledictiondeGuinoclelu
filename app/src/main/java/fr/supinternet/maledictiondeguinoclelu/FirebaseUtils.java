@@ -39,13 +39,13 @@ public class FirebaseUtils {
 
     }
 
-    public static void createPerso(String username, final InputStream avatar, String gender, String race, final OnCompleteListener listener) {
+    public static void createPerso(String username, /*final InputStream avatar,*/ String gender, String race, final OnCompleteListener listener) {
             final User user = new User();
             user.setUsername(username);
             user.setGender(gender);
             user.setRace(race);
             String key = getRef().child("users").push().getKey();
-            sendAvatarStream(avatar, key);
+            //sendAvatarStream(avatar, key);
 
             getRef().child("users").child(getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
