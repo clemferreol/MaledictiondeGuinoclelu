@@ -49,6 +49,11 @@ public class PersoActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference();
         if(perso) {
             setContentView(R.layout.activity_perso);
+
+            //username = (TextView) findViewById(R.id.etusername);
+            //avatar = (InputStream) findViewById(R.id.isavatar);
+            //gender = (TextView) findViewById(R.id.etgender);
+            //race = (TextView) findViewById(R.id.etrace);
             //setDataToView();
         }else{
             setContentView(R.layout.activity_create_perso);
