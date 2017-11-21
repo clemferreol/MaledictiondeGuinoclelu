@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,7 +37,7 @@ public class PersoActivity extends AppCompatActivity {
 
     private DatabaseReference mDatabase;
     private View loading;
-    private Boolean perso;
+    private String perso;
     private String username;
     private InputStream avatar;
     private String gender;
@@ -47,13 +49,20 @@ public class PersoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getProfile();
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        if(perso) {
+        if(perso != null) {
             setContentView(R.layout.activity_perso);
 
-            //username = (TextView) findViewById(R.id.etusername);
+            TextView usernameValue = (TextView) findViewById(R.id.etCreateUsername);
+
+            //gender
+            RadioGroup rgGender = (RadioGroup)findViewById(R.id.radioGender);
+            String radioGenderValue = ((RadioButton)findViewById(rgGender.getCheckedRadioButtonId())).getText().toString();
+
+            //race
+            RadioGroup rgRace = (RadioGroup)findViewById(R.id.radioRace);
+            String radioRaceValue = ((RadioButton)findViewById(rgRace.getCheckedRadioButtonId())).getText().toString();
+
             //avatar = (InputStream) findViewById(R.id.isavatar);
-            //gender = (TextView) findViewById(R.id.etgender);
-            //race = (TextView) findViewById(R.id.etrace);
             //setDataToView();
         }else{
             setContentView(R.layout.activity_create_perso);
@@ -110,7 +119,7 @@ public class PersoActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 User u = dataSnapshot.getValue(User.class);
-                perso = u.getUsername() != null ? true : false;
+                perso = u.getUsername() != null ? u.getUsername() : null;
                 username = u.getUsername();
                 //avatar = u.getAvatar();
                 gender = u.getGender();

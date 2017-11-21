@@ -3,18 +3,33 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/lCreateUsername"
+    <TextView
+        android:id="@+id/title_create_perso"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:text="Create your character"/>
 
-        <EditText
-            android:id="@+id/etCreateUsername"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp">
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/lCreateUsername"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter username"
-            android:inputType="text" />
-    </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etCreateUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter username"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/loading"
@@ -31,24 +46,87 @@
             android:indeterminate="true" />
     </LinearLayout>
 
-    <RadioButton
-        android:id="@+id/radioButton"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="35dp"
-        android:text="RadioButton"
-        android:layout_below="@+id/lCreateUsername"
-        android:layout_toEndOf="@+id/loading" />
+        android:layout_marginTop="160dp">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGender">
 
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:layout_below="@+id/lCreateUsername"
+                android:layout_toEndOf="@+id/loading" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:layout_below="@+id/radioButton"
+                android:layout_alignStart="@+id/radioButton" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="RadioButton"
-        android:layout_below="@+id/radioButton"
-        android:layout_alignStart="@+id/radioButton" />
+        android:layout_marginTop="240dp">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioRace">
+
+            <RadioButton
+                android:id="@+id/race_humain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Human"
+                android:layout_below="@+id/lCreateUsername"
+                android:layout_toEndOf="@+id/loading" />
+
+            <RadioButton
+                android:id="@+id/race_orc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Orc"
+                android:layout_below="@+id/radioButton"
+                android:layout_alignStart="@+id/radioButton" />
+
+            <RadioButton
+                android:id="@+id/race_elfe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elf"
+                android:layout_below="@+id/lCreateUsername"
+                android:layout_toEndOf="@+id/loading" />
+
+            <RadioButton
+                android:id="@+id/race_gnome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dwarf"
+                android:layout_below="@+id/radioButton"
+                android:layout_alignStart="@+id/radioButton" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="390dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create it"/>
+    </RelativeLayout>
+
+
 
 
 </RelativeLayout>
