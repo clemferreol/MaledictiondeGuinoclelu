@@ -9,12 +9,14 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -38,6 +40,7 @@ public class PersoActivity extends AppCompatActivity {
     private InputStream avatar;
     private String gender;
     private String race;
+    private Button btCreate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +49,33 @@ public class PersoActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference();
         if(perso) {
             setContentView(R.layout.activity_perso);
-            System.out.print("perso is not null");
+            //setDataToView();
         }else{
             setContentView(R.layout.activity_create_perso);
-            Log.d("MainActivity", "onAuthStateChanged");
+            /*
+            btCreate = (Button) findViewById(R.id.btCreate);
+
+            btCreate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (checkIfEditTextEmpty(etUsername, "Specify a username")) return;
+                    if (checkIfEditTextEmpty(etAvatar, "Specify an avatar")) return;
+                    if (checkIfEditTextEmpty(etRace, "Specify a race")) return;
+                    if (checkIfEditTextEmpty(etgender, "Specify a gender")) return;
+
+                    createPerso(etUsername.getText().toString(),
+                            etAvatar.getText().toString(),
+                            etRace.getText().toString()),
+                            etgender.getText().toString()),
+                            ;
+
+                    Bundle bundle = new Bundle();
+                    bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "EVENTS_LOGIN_PAGE");
+                    bundle.putString("ENTRY_POINT", "Create");
+                    mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+                }
+            });*/
+
         }
     }
 
@@ -67,6 +93,11 @@ public class PersoActivity extends AppCompatActivity {
         });
     }
 
+
+    @SuppressLint("SetTextI18n")
+    private void setDataToView() {
+        getProfile();
+    }
 
 
     private void getProfile() {
