@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    goToPersoActivity();
+                    goToPersoShowActivity();
                 } else {
                     Toast.makeText(getBaseContext(), task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                     showLoading(false);
@@ -132,6 +132,12 @@ public class MainActivity extends AppCompatActivity {
     private void goToPersoActivity() {
         showLoading(false);
         Intent intent = new Intent(getBaseContext(), PersoActivity.class);
+        startActivity(intent);
+    }
+
+    private void goToPersoShowActivity() {
+        showLoading(false);
+        Intent intent = new Intent(getBaseContext(), ShowPersoActivity.class);
         startActivity(intent);
     }
 }

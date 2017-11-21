@@ -54,20 +54,12 @@ public class PersoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getProfile();
         mDatabase = FirebaseDatabase.getInstance().getReference();
-
         setContentView(R.layout.activity_create_perso);
 
         loading = findViewById(R.id.loading);
         etUsername = (EditText) findViewById(R.id.etCreateUsername);
-
-        //gender
         rgGender = (RadioGroup)findViewById(R.id.radioGender);
-        //radioGenderValue = ((RadioButton)findViewById(rgGender.getCheckedRadioButtonId())).getText().toString();
-
-        //race
         rgRace = (RadioGroup)findViewById(R.id.radioRace);
-        // radioRaceValue = ((RadioButton)findViewById(rgRace.getCheckedRadioButtonId())).getText().toString();
-
         //avatar = (InputStream) findViewById(R.id.isavatar);
 
 
@@ -102,7 +94,7 @@ public class PersoActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task task) {
                 if (task.isSuccessful()) {
-                    goToPersoActivity();
+                    goToPersoShowActivity();
                 } else {
                     Toast.makeText(getBaseContext(), task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                     showLoading(false);
@@ -140,9 +132,9 @@ public class PersoActivity extends AppCompatActivity {
         loading.setVisibility(show ? View.VISIBLE : View.GONE);
     }
 
-    private void goToPersoActivity() {
+    private void goToPersoShowActivity() {
         showLoading(false);
-        Intent intent = new Intent(getBaseContext(), PersoActivity.class);
+        Intent intent = new Intent(getBaseContext(), ShowPersoActivity.class);
         startActivity(intent);
     }
 }
