@@ -1,523 +1,631 @@
 {
-  "data": [
-    {
-      "lieu": "lieu_1",
-      "event": [
+    "map": [
         {
-          "id": "evenement_1",
-          "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
-          "answers_event": {
-            "answer_1": "On fonce !",
-            "answer_2": "Soyons prudent...",
-            "answer_3": "Nous ne devrions pas y entrer."
-          },
-          "answers": {
-            "answer_1": {
-              "1": {
-                "message": "",
-                "hp": -1
-              },
-              "2": {
-                "message": "",
-                "hp": 0
-              },
-              "3": {
-                "message": "",
-                "hp": 1
-              }
-            },
-            "answer_2": {
-              "1": {
-                "message": "",
-                "hp": -1
-              },
-              "2": {
-                "message": "",
-                "hp": 0
-              },
-              "3": {
-                "message": "",
-                "hp": 1
-              }
-            },
-            "answer_3": {
-              "1": {
-                "message": "",
-                "hp": -1
-              },
-              "2": {
-                "message": "",
-                "hp": 0
-              },
-              "3": {
-                "message": "",
-                "hp": 1
-              }
-            }
-          },
-          "count": 0
+            "id": "lieu_1",
+            "event": [
+                {
+                    "id": "evenement_1",
+                    "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
+                    "actions": [
+                        {
+                            "answer_id": "1",
+                            "content": "On fonce !"
+                        },
+                        {
+                            "answer_id": "2",
+                            "content": "Soyons prudent..."
+                        },
+                        {
+                            "answer_id": "3",
+                            "content": "Nous ne devrions pas y entrer."
+                        }
+                    ],
+                    "answers": [
+                        {
+                            "1": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "2": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "3": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "evenement_2",
+                    "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
+                    "actions": [
+                        {
+                            "answer_id": "1",
+                            "content": "On fonce !"
+                        },
+                        {
+                            "answer_id": "2",
+                            "content": "Soyons prudent..."
+                        },
+                        {
+                            "answer_id": "3",
+                            "content": "Nous ne devrions pas y entrer."
+                        }
+                    ],
+                    "answers": [
+                        {
+                            "1": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "2": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "3": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "evenement_3",
+                    "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
+                    "actions": [
+                        {
+                            "answer_id": "1",
+                            "content": "On fonce !"
+                        },
+                        {
+                            "answer_id": "2",
+                            "content": "Soyons prudent..."
+                        },
+                        {
+                            "answer_id": "3",
+                            "content": "Nous ne devrions pas y entrer."
+                        }
+                    ],
+                    "answers": [
+                        {
+                            "1": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "2": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "3": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "id": "evenement_2",
-          "content": "Guinoclelu vous cris dans les oreilles qu'un vaisseau est en approche ! La question est simple : ennemi ou allié ?",
-          "answers_event": {
-            "answer_1": "Préparons nous à la baston !",
-            "answer_2": "Super, un copain !",
-            "answer_3": "Fuyons avant qu'il arrive !"
-          },
-          "answers": {
-            "answer_1": {
-              "1": {
-                "message": "",
-                "hp": -1
-              },
-              "2": {
-                "message": "",
-                "hp": 0
-              },
-              "3": {
-                "message": "",
-                "hp": 1
-              }
-            },
-            "answer_2": {
-              "1": {
-                "message": "",
-                "hp": -1
-              },
-              "2": {
-                "message": "",
-                "hp": 0
-              },
-              "3": {
-                "message": "",
-                "hp": 1
-              }
-            },
-            "answer_3": {
-              "1": {
-                "message": "",
-                "hp": -1
-              },
-              "2": {
-                "message": "",
-                "hp": 0
-              },
-              "3": {
-                "message": "",
-                "hp": 1
-              }
-            }
-          },
-          "count": 0
+            "id": "lieu_2",
+            "event": [
+                {
+                    "id": "evenement_1",
+                    "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
+                    "actions": [
+                        {
+                            "answer_id": "1",
+                            "content": "On fonce !"
+                        },
+                        {
+                            "answer_id": "2",
+                            "content": "Soyons prudent..."
+                        },
+                        {
+                            "answer_id": "3",
+                            "content": "Nous ne devrions pas y entrer."
+                        }
+                    ],
+                    "answers": [
+                        {
+                            "1": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "2": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "3": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "evenement_2",
+                    "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
+                    "actions": [
+                        {
+                            "answer_id": "1",
+                            "content": "On fonce !"
+                        },
+                        {
+                            "answer_id": "2",
+                            "content": "Soyons prudent..."
+                        },
+                        {
+                            "answer_id": "3",
+                            "content": "Nous ne devrions pas y entrer."
+                        }
+                    ],
+                    "answers": [
+                        {
+                            "1": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "2": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "3": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "evenement_3",
+                    "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
+                    "actions": [
+                        {
+                            "answer_id": "1",
+                            "content": "On fonce !"
+                        },
+                        {
+                            "answer_id": "2",
+                            "content": "Soyons prudent..."
+                        },
+                        {
+                            "answer_id": "3",
+                            "content": "Nous ne devrions pas y entrer."
+                        }
+                    ],
+                    "answers": [
+                        {
+                            "1": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "2": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "3": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "id": "evenement_3",
-          "content": "Guinoclelu vous cris dans les oreilles qu'un vaisseau est en approche ! La question est simple : ennemi ou allié ?",
-          "answers_event": {
-            "answer_1": "Préparons nous à la baston !",
-            "answer_2": "Super, un copain !",
-            "answer_3": "Fuyons avant qu'il arrive !"
-          },
-          "answers": {
-            "answer_1": {
-              "1": {
-                "message": "*TTTTUUUuuutttttt.... TTTTUUUuuutttttt....* On est touché ! *TTTTUUUuuutttttt.... TTTTUUUuuutttttt....*",
-                "hp": -1
-              },
-              "2": {
-                "message": "*CRRRrrrrrrrrrAAAAA.... PRRRFFFffffrrrrrr.... PEW PEW...* Il a disparu... Est-ce qu'on l'a eu ?",
-                "hp": 0
-              },
-              "3": {
-                "message": "PEW PEW PEW* ... Ahah ! On l'a eu avant qu'il arrive ! Bien joué Guino... Enfin hourra !",
-                "hp": 1
-              }
-            },
-            "answer_2": {
-              "1": {
-                "message": "*TTTTUUUuuutttttt.... TTTTUUUuuutttttt....* On est touché ! *TTTTUUUuuutttttt.... TTTTUUUuuutttttt....*",
-                "hp": -1
-              },
-              "2": {
-                "message": "C'était plutôt cool de boire un coup avec lui ! N'est-ce pas Guino... ... Mince ! J'ai oublié Guinoclelu !",
-                "hp": 0
-              },
-              "3": {
-                "message": "On a eu raison de faire confiance à cet inconnu, cette yaourtière est vraiment superbe !",
-                "hp": 1
-              }
-            },
-            "answer_3": {
-              "1": {
-                "message": "*TTTTUUUuuutttttt.... TTTTUUUuuutttttt....* On est touché ! *TTTTUUUuuutttttt.... TTTTUUUuuutttttt....*",
-                "hp": -1
-              },
-              "2": {
-                "message": "",
-                "hp": 0
-              },
-              "3": {
-                "message": "Passage en vitesse lumière dans 3...2...1... C'est partie !",
-                "hp": 1
-              }
-            }
-          },
-          "count": 0
+            "id": "lieu_3",
+            "event": [
+                {
+                    "id": "evenement_1",
+                    "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
+                    "actions": [
+                        {
+                            "answer_id": "1",
+                            "content": "On fonce !"
+                        },
+                        {
+                            "answer_id": "2",
+                            "content": "Soyons prudent..."
+                        },
+                        {
+                            "answer_id": "3",
+                            "content": "Nous ne devrions pas y entrer."
+                        }
+                    ],
+                    "answers": [
+                        {
+                            "1": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "2": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "3": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "evenement_2",
+                    "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
+                    "actions": [
+                        {
+                            "answer_id": "1",
+                            "content": "On fonce !"
+                        },
+                        {
+                            "answer_id": "2",
+                            "content": "Soyons prudent..."
+                        },
+                        {
+                            "answer_id": "3",
+                            "content": "Nous ne devrions pas y entrer."
+                        }
+                    ],
+                    "answers": [
+                        {
+                            "1": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "2": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "3": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "evenement_3",
+                    "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
+                    "actions": [
+                        {
+                            "answer_id": "1",
+                            "content": "On fonce !"
+                        },
+                        {
+                            "answer_id": "2",
+                            "content": "Soyons prudent..."
+                        },
+                        {
+                            "answer_id": "3",
+                            "content": "Nous ne devrions pas y entrer."
+                        }
+                    ],
+                    "answers": [
+                        {
+                            "1": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "2": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "3": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    },
-    {
-      "id": "lieu_2",
-      "events": [
-        {
-          "id": "evenement_1",
-          "content": "Guinoclelu vous cris dans les oreilles qu'un vaisseau est en approche ! La question est simple : ennemi ou allié ?",
-          "answers_event": {
-            "answer_1": "Préparons nous à la baston !",
-            "answer_2": "Super, un copain !",
-            "answer_3": "Fuyons avant qu'il arrive !"
-          },
-          "answers": {
-            "answer_1": {
-              "1": {
-                "message": "",
-                "hp": -1
-              },
-              "2": {
-                "message": "",
-                "hp": 0
-              },
-              "3": {
-                "message": "",
-                "hp": 1
-              }
-            },
-            "answer_2": {
-              "1": {
-                "message": "",
-                "hp": -1
-              },
-              "2": {
-                "message": "",
-                "hp": 0
-              },
-              "3": {
-                "message": "",
-                "hp": 1
-              }
-            },
-            "answer_3": {
-              "1": {
-                "message": "",
-                "hp": -1
-              },
-              "2": {
-                "message": "",
-                "hp": 0
-              },
-              "3": {
-                "message": "",
-                "hp": 1
-              }
-            }
-          },
-          "count": 0
-        },
-        {
-          "id": "evenement_2",
-          "events": [
-            {
-
-            }
-          ]
-        },
-        {
-          "id": "evenement_2",
-          "events": [
-            {
-
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "lieu_3",
-      "events": [
-        {
-          "id": "evenement_1",
-          "events": [
-            {
-
-            }
-          ]
-        },
-        {
-          "id": "evenement_2",
-          "events": [
-            {
-
-            }
-          ]
-        },
-        {
-          "id": "evenement_2",
-          "events": [
-            {
-
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    ]
 }
-
-
-
-
-
-
-
-
-
-/*{
-  "data":[
-    {
-      "lieu_1"
-    {
-      "evenement_1": {
-        "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
-        "answers_event": {
-          "answer_1": "On fonce !",
-          "answer_2": "Soyons prudent...",
-          "answer_3": "Nous ne devrions pas y entrer."
-        },
-        "answers": {
-          "answer_1": {
-            "1": {
-              "message": "",
-              "hp": -1
-            },
-            "2": {
-              "message": "",
-              "hp": 0
-            },
-            "3": {
-              "message": "",
-              "hp": 1
-            }
-          },
-          "answer_2": {
-            "1": {
-              "message": "",
-              "hp": -1
-            },
-            "2": {
-              "message": "",
-              "hp": 0
-            },
-            "3": {
-              "message": "",
-              "hp": 1
-            }
-          },
-          "answer_3": {
-            "1": {
-              "message": "",
-              "hp": -1
-            },
-            "2": {
-              "message": "",
-              "hp": 0
-            },
-            "3": {
-              "message": "",
-              "hp": 1
-            }
-          }
-        },
-        "count": 0
-      },
-      "evenement_2": {
-        "content": "Guinoclelu vous cris dans les oreilles qu'un vaisseau est en approche ! La question est simple : ennemi ou allié ?",
-        "answers_event": {
-          "answer_1": "Préparons nous à la baston !",
-          "answer_2": "Super, un copain !",
-          "answer_3": "Fuyons avant qu'il arrive !"
-        },
-        "answers": {
-          "answer_1": {
-            "1": {
-              "message": "",
-              "hp": -1
-            },
-            "2": {
-              "message": "",
-              "hp": 0
-            },
-            "3": {
-              "message": "",
-              "hp": 1
-            }
-          },
-          "answer_2": {
-            "1": {
-              "message": "",
-              "hp": -1
-            },
-            "2": {
-              "message": "",
-              "hp": 0
-            },
-            "3": {
-              "message": "",
-              "hp": 1
-            }
-          },
-          "answer_3": {
-            "1": {
-              "message": "",
-              "hp": -1
-            },
-            "2": {
-              "message": "",
-              "hp": 0
-            },
-            "3": {
-              "message": "",
-              "hp": 1
-            }
-          }
-        },
-        "count": 0
-      },
-      "evenement_3": {
-        "content": "Guinoclelu vous cris dans les oreilles qu'un vaisseau est en approche ! La question est simple : ennemi ou allié ?",
-        "answers_event": {
-          "answer_1": "Préparons nous à la baston !",
-          "answer_2": "Super, un copain !",
-          "answer_3": "Fuyons avant qu'il arrive !"
-        },
-        "answers": {
-          "answer_1": {
-            "1": {
-              "message": "*TTTTUUUuuutttttt.... TTTTUUUuuutttttt....* On est touché ! *TTTTUUUuuutttttt.... TTTTUUUuuutttttt....*",
-              "hp": -1
-            },
-            "2": {
-              "message": "*CRRRrrrrrrrrrAAAAA.... PRRRFFFffffrrrrrr.... PEW PEW...* Il a disparu... Est-ce qu'on l'a eu ?",
-              "hp": 0
-            },
-            "3": {
-              "message": "PEW PEW PEW* ... Ahah ! On l'a eu avant qu'il arrive ! Bien joué Guino... Enfin hourra !",
-              "hp": 1
-            }
-          },
-          "answer_2": {
-            "1": {
-              "message": "*TTTTUUUuuutttttt.... TTTTUUUuuutttttt....* On est touché ! *TTTTUUUuuutttttt.... TTTTUUUuuutttttt....*",
-              "hp": -1
-            },
-            "2": {
-              "message": "C'était plutôt cool de boire un coup avec lui ! N'est-ce pas Guino... ... Mince ! J'ai oublié Guinoclelu !",
-              "hp": 0
-            },
-            "3": {
-              "message": "On a eu raison de faire confiance à cet inconnu, cette yaourtière est vraiment superbe !",
-              "hp": 1
-            }
-          },
-          "answer_3": {
-            "1": {
-              "message": "*TTTTUUUuuutttttt.... TTTTUUUuuutttttt....* On est touché ! *TTTTUUUuuutttttt.... TTTTUUUuuutttttt....*",
-              "hp": -1
-            },
-            "2": {
-              "message": "",
-              "hp": 0
-            },
-            "3": {
-              "message": "Passage en vitesse lumière dans 3...2...1... C'est partie !",
-              "hp": 1
-            }
-          }
-        },
-        "count": 0
-      }
-    },
-    "lieu_2"
-    :
-    {
-      "evenement_1": {
-        "content": "Guinoclelu vous cris dans les oreilles qu'un vaisseau est en approche ! La question est simple : ennemi ou allié ?",
-        "answers_event": {
-          "answer_1": "Préparons nous à la baston !",
-          "answer_2": "Super, un copain !",
-          "answer_3": "Fuyons avant qu'il arrive !"
-        },
-        "answers": {
-          "answer_1": {
-            "1": {
-              "message": "",
-              "hp": -1
-            },
-            "2": {
-              "message": "",
-              "hp": 0
-            },
-            "3": {
-              "message": "",
-              "hp": 1
-            }
-          },
-          "answer_2": {
-            "1": {
-              "message": "",
-              "hp": -1
-            },
-            "2": {
-              "message": "",
-              "hp": 0
-            },
-            "3": {
-              "message": "",
-              "hp": 1
-            }
-          },
-          "answer_3": {
-            "1": {
-              "message": "",
-              "hp": -1
-            },
-            "2": {
-              "message": "",
-              "hp": 0
-            },
-            "3": {
-              "message": "",
-              "hp": 1
-            }
-          }
-        },
-        "count": 0
-      },
-      "evenement_2": {
-      },
-      "evenement_3": {
-      }
-    },
-    "lieu_3"
-    :
-    {
-      "evenement_1": {
-      },
-      "evenement_2": {
-      },
-      "evenement_3": {
-      }
-    }
-    }
-  ]
-}*/
