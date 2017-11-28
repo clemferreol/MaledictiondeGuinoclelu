@@ -2,6 +2,9 @@ package fr.supinternet.maledictiondeguinoclelu;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import com.google.gson.Gson;
 
@@ -11,19 +14,32 @@ import java.io.InputStream;
 
 public class GameActivity extends AppCompatActivity {
 
+    private RecyclerView recyclerView;
+    private Adapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
+        recyclerView = (RecyclerView) findViewById(R.id.card_recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         Gson gson = new Gson();
         try {
             Model model = gson.fromJson(readJson(),  Model.class);
+            Log.i("GameActivity", "json " + readJson());
+            Log.i("GameActivity", "model " + model.toString());
+            model.getMap().get(0).getId();
+            adapter = new Adapter(this, model.getMap());
+            recyclerView.setAdapter(adapter);
 
-            model.data.toString();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+
 
 
     }
