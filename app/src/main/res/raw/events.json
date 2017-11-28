@@ -1,72 +1,631 @@
 {
-  "map": [
-    {
-      "id": "lieu_1",
-      "event": [
+    "map": [
         {
-          "id": "evenement_1",
-          "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
-          "actions": [
-            {
-              "answer_id": 1,
-              "content": "On fonce !"
-            },
-            {
-              "answer_id": 2,
-              "content": "Soyons prudent..."
-            },
-            {
-              "answer_id": 3,
-              "content": "Nous ne devrions pas y entrer."
-            }
-          ],
-          "answers": [
-
-              [
+            "id": "lieu_1",
+            "event": [
                 {
-                  "message": "",
-                  "hp": -1
+                    "id": "evenement_1",
+                    "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
+                    "actions": [
+                        {
+                            "answer_id": "1",
+                            "content": "On fonce !"
+                        },
+                        {
+                            "answer_id": "2",
+                            "content": "Soyons prudent..."
+                        },
+                        {
+                            "answer_id": "3",
+                            "content": "Nous ne devrions pas y entrer."
+                        }
+                    ],
+                    "answers": [
+                        {
+                            "1": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "2": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "3": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
-                  "message": "",
-                  "hp": 0
+                    "id": "evenement_2",
+                    "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
+                    "actions": [
+                        {
+                            "answer_id": "1",
+                            "content": "On fonce !"
+                        },
+                        {
+                            "answer_id": "2",
+                            "content": "Soyons prudent..."
+                        },
+                        {
+                            "answer_id": "3",
+                            "content": "Nous ne devrions pas y entrer."
+                        }
+                    ],
+                    "answers": [
+                        {
+                            "1": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "2": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "3": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
-                  "message": "",
-                  "hp": 1
+                    "id": "evenement_3",
+                    "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
+                    "actions": [
+                        {
+                            "answer_id": "1",
+                            "content": "On fonce !"
+                        },
+                        {
+                            "answer_id": "2",
+                            "content": "Soyons prudent..."
+                        },
+                        {
+                            "answer_id": "3",
+                            "content": "Nous ne devrions pas y entrer."
+                        }
+                    ],
+                    "answers": [
+                        {
+                            "1": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "2": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "3": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        }
+                    ]
                 }
-              ],
-            [
+            ]
+        },
+        {
+            "id": "lieu_2",
+            "event": [
                 {
-                  "message": "",
-                  "hp": -1
+                    "id": "evenement_1",
+                    "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
+                    "actions": [
+                        {
+                            "answer_id": "1",
+                            "content": "On fonce !"
+                        },
+                        {
+                            "answer_id": "2",
+                            "content": "Soyons prudent..."
+                        },
+                        {
+                            "answer_id": "3",
+                            "content": "Nous ne devrions pas y entrer."
+                        }
+                    ],
+                    "answers": [
+                        {
+                            "1": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "2": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "3": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
-                  "message": "",
-                  "hp": 0
+                    "id": "evenement_2",
+                    "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
+                    "actions": [
+                        {
+                            "answer_id": "1",
+                            "content": "On fonce !"
+                        },
+                        {
+                            "answer_id": "2",
+                            "content": "Soyons prudent..."
+                        },
+                        {
+                            "answer_id": "3",
+                            "content": "Nous ne devrions pas y entrer."
+                        }
+                    ],
+                    "answers": [
+                        {
+                            "1": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "2": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "3": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
-                  "message": "",
-                  "hp": 1
+                    "id": "evenement_3",
+                    "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
+                    "actions": [
+                        {
+                            "answer_id": "1",
+                            "content": "On fonce !"
+                        },
+                        {
+                            "answer_id": "2",
+                            "content": "Soyons prudent..."
+                        },
+                        {
+                            "answer_id": "3",
+                            "content": "Nous ne devrions pas y entrer."
+                        }
+                    ],
+                    "answers": [
+                        {
+                            "1": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "2": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "3": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        }
+                    ]
                 }
-              ],
-            [
+            ]
+        },
+        {
+            "id": "lieu_3",
+            "event": [
                 {
-                  "message": "",
-                  "hp": -1
+                    "id": "evenement_1",
+                    "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
+                    "actions": [
+                        {
+                            "answer_id": "1",
+                            "content": "On fonce !"
+                        },
+                        {
+                            "answer_id": "2",
+                            "content": "Soyons prudent..."
+                        },
+                        {
+                            "answer_id": "3",
+                            "content": "Nous ne devrions pas y entrer."
+                        }
+                    ],
+                    "answers": [
+                        {
+                            "1": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "2": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "3": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
-                  "message": "",
-                  "hp": 0
+                    "id": "evenement_2",
+                    "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
+                    "actions": [
+                        {
+                            "answer_id": "1",
+                            "content": "On fonce !"
+                        },
+                        {
+                            "answer_id": "2",
+                            "content": "Soyons prudent..."
+                        },
+                        {
+                            "answer_id": "3",
+                            "content": "Nous ne devrions pas y entrer."
+                        }
+                    ],
+                    "answers": [
+                        {
+                            "1": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "2": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "3": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
-                  "message": "",
-                  "hp": 1
+                    "id": "evenement_3",
+                    "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
+                    "actions": [
+                        {
+                            "answer_id": "1",
+                            "content": "On fonce !"
+                        },
+                        {
+                            "answer_id": "2",
+                            "content": "Soyons prudent..."
+                        },
+                        {
+                            "answer_id": "3",
+                            "content": "Nous ne devrions pas y entrer."
+                        }
+                    ],
+                    "answers": [
+                        {
+                            "1": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "2": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        },
+                        {
+                            "3": [
+                                {
+                                    "message": "",
+                                    "hp": -1
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 0
+                                },
+                                {
+                                    "message": "",
+                                    "hp": 1
+                                }
+                            ]
+                        }
+                    ]
                 }
-              ]
-          ]
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
