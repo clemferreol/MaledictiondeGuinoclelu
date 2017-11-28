@@ -12,12 +12,10 @@ import java.util.ArrayList;
 public class Model {
 
     @SerializedName("data")
-    public ArrayList<MyObject> list;
+    public ArrayList<MyObject> data;
 
     static public class MyObject {
-        @SerializedName("name")
-        public String name;
-        @SerializedName("age")
-        public int age;
+        @SerializedName("lieu")
+        public String lieu;
     }
 }
