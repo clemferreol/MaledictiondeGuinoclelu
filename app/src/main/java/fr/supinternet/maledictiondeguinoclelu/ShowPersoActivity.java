@@ -1,10 +1,12 @@
 package fr.supinternet.maledictiondeguinoclelu;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -21,6 +23,7 @@ public class ShowPersoActivity extends AppCompatActivity {
     protected TextView tvRace;
     protected String race;
     private View loading;
+    private Button play;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,7 +33,16 @@ public class ShowPersoActivity extends AppCompatActivity {
         tvUsername = (TextView) findViewById(R.id.profil_username);
         tvGender = (TextView) findViewById(R.id.profil_gender);
         tvRace = (TextView) findViewById(R.id.profil_race);
+        play = (Button) findViewById(R.id.play);
         setDataToView();
+
+        play.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(ShowPersoActivity.this, GameActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @SuppressLint("SetTextI18n")

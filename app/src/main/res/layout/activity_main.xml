@@ -3,8 +3,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:gravity="center">
+    android:focusableInTouchMode="true">
+
+
+    <Button
+        android:id="@+id/inscription"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="0dp"
+        android:text="Inscription"
+        android:layout_alignParentTop="true"
+         />
+
+    <Button
+        android:id="@+id/connexion"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:text="Connexion"
+        android:layout_toEndOf="@+id/inscription"/>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -13,16 +32,19 @@
         android:paddingBottom="10dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
-        android:paddingTop="10dp">
+        android:paddingTop="10dp"
+        android:layout_marginTop="60dp"
+        android:id="@+id/linearLayout">
 
-        <include layout="@layout/include_signup"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/colorPrimary"/>
+        <include
+            android:id="@+id/includesignup"
+            layout="@layout/include_signup"
+             />
 
-        <include layout="@layout/include_login"/>
+        <include layout="@layout/include_login"
+            android:visibility="invisible"
+            android:id="@+id/includelogin"/>
 
     </LinearLayout>
 
@@ -40,5 +62,7 @@
             android:layout_height="50dp"
             android:indeterminate="true" />
     </LinearLayout>
+
+
 
 </RelativeLayout>

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -18,6 +19,7 @@ import com.google.firebase.auth.AuthResult;
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAnalytics mFirebaseAnalytics;
+
     private static final String TAG = "LoginActivity";
     private EditText etSignupName;
     private EditText etSignupEmail;
@@ -26,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
     private EditText etLoginPassword;
     private Button btLogin;
     private Button btSignup;
+
+    private Button connexion;
+    private Button inscription;
+
+    private RelativeLayout loginlayout;
+    private RelativeLayout signuplayout;
+
     private View loading;
 
     @Override
@@ -36,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
         findViews();
         setListeners();
-        login("test@test.com", "azerty");
     }
 
     private void findViews() {
@@ -44,9 +52,20 @@ public class MainActivity extends AppCompatActivity {
         etSignupEmail = (EditText) findViewById(R.id.etSignupEmail);
         etSignupPassword = (EditText) findViewById(R.id.etSignupPassword);
         btSignup = (Button) findViewById(R.id.btSignup);
+        btLogin = (Button) findViewById(R.id.btLogin);
+
+        connexion = (Button) findViewById(R.id.connexion);
+        inscription = (Button) findViewById(R.id.inscription);
+
+        loginlayout = (RelativeLayout) findViewById(R.id.includelogin);
+        signuplayout = (RelativeLayout) findViewById(R.id.includesignup);
+
         etLoginEmail = (EditText) findViewById(R.id.etLoginEmail);
         etLoginPassword = (EditText) findViewById(R.id.etLoginPassword);
         btLogin = (Button) findViewById(R.id.btLogin);
+
+
+
         loading = findViewById(R.id.loading);
     }
 
@@ -82,6 +101,23 @@ public class MainActivity extends AppCompatActivity {
                 bundle.putString("EMAIL_LENGTH", etSignupPassword.length() + "");
                 bundle.putString("PASSWORD_LENGTH", etSignupPassword.length() + "");
                 mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+
+            }
+        });
+
+        connexion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loginlayout.setVisibility(View.VISIBLE);
+                signuplayout.setVisibility(View.GONE);
+            }
+        });
+
+        inscription.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                signuplayout.setVisibility(View.VISIBLE);
+                loginlayout.setVisibility(View.GONE);
             }
         });
     }
