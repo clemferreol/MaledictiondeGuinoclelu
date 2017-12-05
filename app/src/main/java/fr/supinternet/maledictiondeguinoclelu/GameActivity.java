@@ -38,10 +38,6 @@ public class GameActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-
-
-
-
     }
 
     private String readJson() throws IOException {
