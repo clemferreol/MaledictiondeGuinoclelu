@@ -36,7 +36,6 @@ public class EventsActivity extends AppCompatActivity {
 
         titleevent = (TextView) findViewById(R.id.eventtitle);
         contentevent = (TextView) findViewById(R.id.eventContent);
-        display = (TextView) findViewById(R.id.display);
         action1 = (Button) findViewById(R.id.action1);
         action2 = (Button) findViewById(R.id.action2);
         action3 = (Button) findViewById(R.id.action3);

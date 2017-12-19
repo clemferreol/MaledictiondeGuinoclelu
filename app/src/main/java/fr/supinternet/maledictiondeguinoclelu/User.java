@@ -1,5 +1,7 @@
 package fr.supinternet.maledictiondeguinoclelu;
 
+import java.util.ArrayList;
+
 /**
  * Created by clementineferreol on 13/11/2017.
  */
@@ -11,6 +13,7 @@ public class User {
     protected String avatar;
     protected String gender;
     protected String race;
+    protected ArrayList inventory;
 
     public User() {
     }
@@ -61,5 +64,13 @@ public class User {
 
     public void setRace(String race) {
         this.race = race;
+    }
+
+    public ArrayList getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(ArrayList inventory) {
+        this.inventory = inventory;
     }
 }
