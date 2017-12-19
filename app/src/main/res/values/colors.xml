@@ -3,4 +3,19 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!--<color name="ink">#062F4F</color>
+    <color name="posy">#813772</color>
+    <color name="embers">#B82601</color>-->
+
+    <color name="ink">#1E392A</color>
+    <color name="posy">#E9C893</color>
+    <color name="embers">#3CC47C</color>
+    <color name="header">#8c8282</color>
+    <color name="redAction">#B82601</color>
+
+    <color name="gray">#9c9c9c</color>
+    <color name="darkgray">#3f3f3f</color>
 </resources>
