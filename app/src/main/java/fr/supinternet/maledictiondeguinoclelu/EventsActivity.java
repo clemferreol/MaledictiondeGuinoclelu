@@ -3,6 +3,7 @@ package fr.supinternet.maledictiondeguinoclelu;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -19,7 +20,7 @@ public class EventsActivity extends AppCompatActivity {
 
     private TextView titleevent;
     private TextView contentevent;
-    private TextView display;
+    public TextView hp;
     private Button action1;
     private Button action2;
     private Button action3;
@@ -41,10 +42,15 @@ public class EventsActivity extends AppCompatActivity {
 
         titleevent = (TextView) findViewById(R.id.eventtitle);
         contentevent = (TextView) findViewById(R.id.eventContent);
+        hp = (TextView) findViewById(R.id.hp);
         action1 = (Button) findViewById(R.id.action1);
         action2 = (Button) findViewById(R.id.action2);
         action3 = (Button) findViewById(R.id.action3);
         backButton = (Button) findViewById(R.id.BACKBUTTON);
+        final int intbut = 40;
+
+        hp.setText(String.valueOf(intbut));
+
 
         Place place = getIntent().getParcelableExtra(STRING_KEY);
 
@@ -65,7 +71,7 @@ public class EventsActivity extends AppCompatActivity {
                 public void onClick(View v){
                     Random rn = new Random();
                     int random = rn.nextInt(8 - 0 + 1) + 0;
-                    Answer answer = event.getAnswers().get(random);
+                    final Answer answer = event.getAnswers().get(random);
                     AlertDialog.Builder builder;
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                         builder = new AlertDialog.Builder(EventsActivity.this, android.R.style.Theme_Material_Dialog_Alert);
@@ -76,6 +82,13 @@ public class EventsActivity extends AppCompatActivity {
                             .setMessage(answer.getMessage() + "\n" + "Votre HP : " + answer.getHp())
                             .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
+                                    if(answer.getHp() == 1){
+                                        hp.setText(String.valueOf(intbut + 1));
+                                    }
+                                    if(answer.getHp() == 0){
+                                        hp.setText(String.valueOf(intbut + 0));
+                                    }
+
                                     Intent intent = getIntent();
                                     finish();
                                     startActivity(intent);
