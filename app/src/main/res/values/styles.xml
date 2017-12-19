@@ -3,9 +3,45 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="titleTextStyle">@style/MyTitleTextStyle</item>
+    </style>
+
+    <style name="MyTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="InputStyle" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:textSize">18sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/ink</item>
+        <item name="colorControlNormal">@color/ink</item>
+        <item name="colorControlActivated">@color/ink</item>
+    </style>
+
+    <style name="SubmitStyle" parent="Widget.AppCompat.Button.Colored">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="colorButtonNormal">@color/embers</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="DirectionStyle" parent="Widget.AppCompat.Button.Colored">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="colorButtonNormal">@color/posy</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="RedActionStyle" parent="Widget.AppCompat.Button.Colored">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="colorButtonNormal">@color/redAction</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
 </resources>

@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
         findViews();
         setListeners();
+        login("test@test.com", "azerty");
     }
 
     private void findViews() {

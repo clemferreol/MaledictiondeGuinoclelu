@@ -35,11 +35,19 @@
          />
 
     <Button
+        android:id="@+id/update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:theme="@style/DirectionStyle"
+        android:text="Update Profile" />
+
+    <Button
         android:id="@+id/logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:background="#FFA000"
+        android:theme="@style/RedActionStyle"
         android:text="LogOut" />
 
 </LinearLayout>

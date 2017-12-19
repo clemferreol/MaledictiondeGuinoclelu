@@ -2,40 +2,30 @@ package fr.supinternet.maledictiondeguinoclelu;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 
 import java.io.InputStream;
-import java.util.ArrayList;
 
 
-public class PersoActivity extends AppCompatActivity {
+public class UpdatePersoActivity extends AppCompatActivity {
 
     private DatabaseReference mDatabase;
     private View loading;
@@ -43,7 +33,7 @@ public class PersoActivity extends AppCompatActivity {
     private InputStream avatar;
     private String gender;
     private String race;
-    private Button btCreate;
+    private Button btUpdate;
     private EditText etUsername;
     private RadioGroup rgGender;
     private RadioGroup rgRace;
@@ -51,24 +41,22 @@ public class PersoActivity extends AppCompatActivity {
     private String radioRaceValue;
     private User user;
 
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getProfile();
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        setContentView(R.layout.activity_create_perso);
+        setContentView(R.layout.activity_update_perso);
 
         loading = findViewById(R.id.loading);
-        etUsername = (EditText) findViewById(R.id.etCreateUsername);
+        etUsername = (EditText) findViewById(R.id.etUpdateUsername);
         rgGender = (RadioGroup)findViewById(R.id.radioGender);
         rgRace = (RadioGroup)findViewById(R.id.radioRace);
         //avatar = (InputStream) findViewById(R.id.isavatar);
 
+        btUpdate = (Button) findViewById(R.id.btUpdate);
 
-        btCreate = (Button) findViewById(R.id.btCreate);
-
-        btCreate.setOnClickListener(new View.OnClickListener() {
+        btUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                     /*if (checkIfEditTextEmpty(etUsername, "Specify a username")) return;
@@ -76,7 +64,7 @@ public class PersoActivity extends AppCompatActivity {
                     if (checkIfEditTextEmpty(etRace, "Specify a race")) return;
                     if (checkIfEditTextEmpty(etgender, "Specify a gender")) return;*/
 
-                createPerso(etUsername.getText().toString(),
+                updatePerso(etUsername.getText().toString(),
                         //etAvatar.getText().toString(),
                         ((RadioButton)findViewById(rgGender.getCheckedRadioButtonId())).getText().toString(),
                         ((RadioButton)findViewById(rgRace.getCheckedRadioButtonId())).getText().toString());
@@ -91,9 +79,9 @@ public class PersoActivity extends AppCompatActivity {
     }
 
 
-    private void createPerso(String username, /*InputStream avatar,*/ String gender, String race) {
+    private void updatePerso(String username, /*InputStream avatar,*/ String gender, String race) {
         showLoading(true);
-        FirebaseUtils.createPerso(user, username, /*avatar,*/ gender, race, new OnCompleteListener() {
+        FirebaseUtils.updatePerso(user, username, /*avatar,*/ gender, race, new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull Task task) {
                 if (task.isSuccessful()) {
@@ -123,6 +111,10 @@ public class PersoActivity extends AppCompatActivity {
                 //avatar = u.getAvatar();
                 gender = u.getGender();
                 race = u.getRace();
+                if(username != null && gender != null && race != null){
+                    updateViews();
+                }
+
             }
 
             @Override
@@ -130,6 +122,39 @@ public class PersoActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void updateViews() {
+
+        etUsername.setText(username);
+
+        int count = rgGender.getChildCount();
+        for (int i=0;i<count;i++) {
+            RadioButton o = (RadioButton) rgGender.getChildAt(i);
+            if (o.getId() == R.id.gender_male) {
+                o.setChecked(gender.equals("Male"));
+            }
+            if (o.getId() == R.id.gender_female) {
+                o.setChecked(gender.equals("Female"));
+            }
+        }
+        count = rgRace.getChildCount();
+        for (int i=0;i<count;i++) {
+            RadioButton o = (RadioButton) rgRace.getChildAt(i);
+            if (o.getId() == R.id.race_humain) {
+                o.setChecked(race.equals("Human"));
+            }
+            if (o.getId() == R.id.race_orc) {
+                o.setChecked(race.equals("Orc"));
+            }
+            if (o.getId() == R.id.race_elfe) {
+                o.setChecked(race.equals("Elfe"));
+            }
+            if (o.getId() == R.id.race_dwarf) {
+                o.setChecked(race.equals("Dwarf"));
+            }
+        }
+
     }
 
     private void showLoading(boolean show) {
