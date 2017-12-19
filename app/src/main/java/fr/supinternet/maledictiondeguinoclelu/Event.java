@@ -28,6 +28,7 @@ public class Event implements Parcelable {
         id = in.readString();
         content = in.readString();
         actions = in.createTypedArrayList(Action.CREATOR);
+        //in.readList(answers, getClass().getClassLoader());
     }
 
     @Override
@@ -35,6 +36,7 @@ public class Event implements Parcelable {
         dest.writeString(id);
         dest.writeString(content);
         dest.writeTypedList(actions);
+        //dest.writeList(answers);
     }
 
     @Override

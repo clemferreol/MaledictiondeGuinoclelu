@@ -23,15 +23,15 @@
           "answers": [
             [
               {
-                "message": "blublu",
+                "message": "",
                 "hp": -1
               },
               {
-                "message": "blibli",
+                "message": "",
                 "hp": 0
               },
               {
-                "message": "blabla",
+                "message": "",
                 "hp": 1
               }
             ],
