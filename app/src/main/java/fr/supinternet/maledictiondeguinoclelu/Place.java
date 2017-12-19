@@ -16,7 +16,7 @@ public class Place implements Parcelable {
     @SerializedName("id")
     private String id;
 
-    @SerializedName("place")
+    @SerializedName("event")
     private ArrayList<Event> event;
 
     protected Place(Parcel in) {
@@ -56,7 +56,7 @@ public class Place implements Parcelable {
     public String toString() {
         return "Lieu{" +
                 "id='" + id + '\'' +
-                ", place=" + event +
+                ", event=" + event +
                 '}';
     }
 

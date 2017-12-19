@@ -1,7 +1,10 @@
 package fr.supinternet.maledictiondeguinoclelu;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +19,7 @@ public class EventsActivity extends AppCompatActivity {
 
     private TextView titleevent;
     private TextView contentevent;
+    private TextView display;
     private Button action1;
     private Button action2;
     private Button action3;
@@ -26,6 +30,7 @@ public class EventsActivity extends AppCompatActivity {
         Intent intent = new Intent(context, EventsActivity.class);
         intent.putExtra(EventsActivity.STRING_KEY, place);
         context.startActivity(intent);
+
     }
 
     @Override
@@ -41,7 +46,7 @@ public class EventsActivity extends AppCompatActivity {
 
         Place place = getIntent().getParcelableExtra(STRING_KEY);
 
-       //StringBuilder builder = new StringBuilder();
+        // StringBuilder builder = new StringBuilder();
         for(int l=0; l<=place.getEvent().size(); l++){
             Random r = new Random();
             final int i1 = r.nextInt((place.getEvent().size() -1) - 0) + 0;
@@ -53,24 +58,88 @@ public class EventsActivity extends AppCompatActivity {
             contentevent.setText(event.getContent());
 
             action1.setText(event.getActions().get(0).getContent());
-
-
             action1.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v){
-                    Answer answer = event.getAnswers().get(0).get(i1);
-                    Toast.makeText(EventsActivity.this, answer.getMessage(), Toast.LENGTH_LONG).show();
-                    //afficher réponse de manière aléatoire et changer HP
-                    //Intent intent = new Intent(EventsActivity.this, Event2Activity.class);
-                    //startActivity(intent);
+                    Random rn = new Random();
+                    int random = rn.nextInt(8 - 0 + 1) + 0;
+                    Answer answer = event.getAnswers().get(random);
+                    AlertDialog.Builder builder;
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        builder = new AlertDialog.Builder(EventsActivity.this, android.R.style.Theme_Material_Dialog_Alert);
+                    } else {
+                        builder = new AlertDialog.Builder(EventsActivity.this);
+                    }
+                    builder.setTitle("Message : ")
+                            .setMessage(answer.getMessage() + "\n" + "Votre HP : " + answer.getHp())
+                            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent intent = getIntent();
+                                    finish();
+                                    startActivity(intent);
+                                }
+                            })
+                            .setIcon(android.R.drawable.ic_dialog_alert)
+                            .show();
                 }
             });
 
             action2.setText(event.getActions().get(1).getContent());
 
+            action2.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    Random rn = new Random();
+                    int random = rn.nextInt(8 - 0 + 1) + 0;
+                    Answer answer = event.getAnswers().get(random);
+                    AlertDialog.Builder builder;
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        builder = new AlertDialog.Builder(EventsActivity.this, android.R.style.Theme_Material_Dialog_Alert);
+                    } else {
+                        builder = new AlertDialog.Builder(EventsActivity.this);
+                    }
+                    builder.setTitle("Message : ")
+                            .setMessage(answer.getMessage() + "\n" + "Votre HP : " + answer.getHp())
+                            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent intent = getIntent();
+                                    finish();
+                                    startActivity(intent);
+                                }
+                            })
+                            .setIcon(android.R.drawable.ic_dialog_alert)
+                            .show();
+                }
+            });
 
             action3.setText(event.getActions().get(2).getContent());
+            action3.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    Random rn = new Random();
+                    int random = rn.nextInt(8 - 0 + 1) + 0;
+                    Answer answer = event.getAnswers().get(random);
+                    AlertDialog.Builder builder;
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        builder = new AlertDialog.Builder(EventsActivity.this, android.R.style.Theme_Material_Dialog_Alert);
+                    } else {
+                        builder = new AlertDialog.Builder(EventsActivity.this);
+                    }
+                    builder.setTitle("Message : ")
+                            .setMessage(answer.getMessage() + "\n" + "Votre HP : " + answer.getHp())
+                            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent intent = getIntent();
+                                    finish();
+                                    startActivity(intent);
+                                }
+                            })
+                            .setIcon(android.R.drawable.ic_dialog_alert)
+                            .show();
+                }
+            });
             break;
         }
+
     }
 }

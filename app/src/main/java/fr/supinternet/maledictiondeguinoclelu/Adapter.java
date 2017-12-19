@@ -1,6 +1,7 @@
 package fr.supinternet.maledictiondeguinoclelu;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -43,6 +44,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 EventsActivity.startActivity(context, arrayPlaces.get(holder.getAdapterPosition()));
                 /*Intent intent = new Intent(view.getContext(), EventsActivity.class);
                 intent.putExtra(EventsActivity.STRING_KEY, arrayPlaces.get(holder.getAdapterPosition()));

@@ -1,10 +1,10 @@
 {
   "map": [
     {
-      "id": "lieu_1",
+      "id": "Supermassive Black Hole",
       "event": [
         {
-          "id": "evenement_1",
+          "id": "Face au trou noir, que fait-on ?",
           "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
           "actions": [
             {
@@ -21,7 +21,6 @@
             }
           ],
           "answers": [
-            [
               {
 
                 "message": "OK ! On y v.... aaaaAAAAAHHHHHH... ... ... AAAAAAAAAAaaaaaaaaaahhhh !! Qu'est ce que... Oh non ! Le vaisseau est touché !",
@@ -34,9 +33,7 @@
               {
                 "message": "C\'est partie ! ... ... ... Oh, regarde Guinoclelu, des pièces pour notre vaisseau, attrapons les !",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "OK ! On y v.... aaaaAAAAAHHHHHH... ... ... AAAAAAAAAAaaaaaaaaaahhhh !! Qu'est ce que... Oh non Guinoclelu ! T'aurais pu vomir dans les toilettes !",
                 "hp": 0
@@ -48,9 +45,7 @@
               {
                 "message": "Allons-y Guinoclelu ! Que le destin nous... ... YOUAH ! Un Bizotron X500 ! Une merveille de technologie, ramenons le !",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "Bon... n'y allons pas alors. Attention, des débris sortent du trou noir ! BRRRAAAMMMM BOUM CRASH....",
                 "hp": -1
@@ -63,11 +58,10 @@
                 "message": "Ahah ! Nous avons gagné beaucoup de temps, bravo Guinoclelu !",
                 "hp": 1
               }
-            ]
           ]
         },
         {
-          "id": "evenement_2",
+          "id": "Un Vaisseau étranger",
           "content": "Capitaine, un vaisseau arrive ! Que faisons-nous ?",
           "actions": [
             {
@@ -84,7 +78,6 @@
             }
           ],
           "answers": [
-            [
               {
                 "message": "Il est là ! RATATATATATATATATATATA !!!! BRAM BRAM BRAM CRASH... Non ! Le flanc droit est touché !",
                 "hp": -1
@@ -96,9 +89,7 @@
               {
                 "message": "Guinoclelu ? Qu'est ce que tu fait ? BAAM BAAM BAAM BAAM ! Wouaw ! Tu l'a eu ! Tu es un super tireur ! Foullions l'épave maintenant...",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "*TTTTUUUuuutttttt.... TTTTUUUuuutttttt....* Lâche ce klaxon Guinoclelu ! Pas croyable ça...",
                 "hp": 0
@@ -110,9 +101,7 @@
               {
                 "message": "On a eu raison de faire confiance à cet inconnu, cette yaourtière est vraiment superbe !",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "*TTTTUUUuuutttttt.... TTTTUUUuuutttttt....* On est touché ! *TTTTUUUuuutttttt.... TTTTUUUuuutttttt....*",
                 "hp": -1
@@ -125,11 +114,10 @@
                 "message": "Passage en vitesse lumière dans 3...2...1... C\'est partie !",
                 "hp": 1
               }
-            ]
           ]
         },
         {
-          "id": "evenement_3",
+          "id": "Attaque d'astétoïdes",
           "content": "Un champ d\'asteroïde, droit devant nous ! Il va falloir passer aux commandes Guinoclelu ! Prêt ?",
           "actions": [
             {
@@ -146,7 +134,6 @@
             }
           ],
           "answers": [
-            [
               {
                 "message": "Hop ! Hop ! Holeeee ! Attenti.... *KRRRRRRRRRRRRRRRRRRR* ... ... Bon, et bien il va falloir réparer !",
                 "hp": -1
@@ -158,9 +145,7 @@
               {
                 "message": "EASY ! On est passé comme pa... comme dans du beurre.",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "Hop ! Hop ! Holeeee ! Attenti.... Olalaaaaaaaa ... ... C\'est chauuuud ! ... ... Ok, on a eu de la chance.",
                 "hp": 0
@@ -172,9 +157,7 @@
               {
                 "message": "Trop facile ! Ahah ! Et en plus on a ramasser un gisement de kryptonite. Que demander de plus ?",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "Quelle bien mauvaise idée de passer au travers de ce champ d\'asteroïde, on a perdu un temps fou !",
                 "hp": -1
@@ -187,11 +170,10 @@
                 "message": "Bonne idée d\'avoir contourné ce champ d\'asteroïde. On a évité de mettre le vaisseau en miettes.",
                 "hp": 1
               }
-            ]
           ]
         },
         {
-          "id": "evenement_4",
+          "id": "Éviter la planète",
           "content": "Une planète à plus de 100 000 degrés ! Nous avons arrêté l\'hyper vitesse trop tôt ! Vite, il faut prendre une décision avant de brûler vife !",
           "actions": [
             {
@@ -208,7 +190,6 @@
             }
           ],
           "answers": [
-            [
               {
                 "message": "Bon sang, l'ail gauche à fondu ! Le réacteur refuse de continuer ! Et ... Je sais qu\'il fait chaud, mais remet tes vêtements Guinoclelu s\'il te plait !",
                 "hp": -1
@@ -220,9 +201,7 @@
               {
                 "message": "Parfait ! Nous avons gagné en vitesse et allons bientôt pouvoir passer en hyper vitesse. Bravo Guinoclelu !",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "Bon sang ! Mais qu\'est ce que tu fou nu dans le vaisseau Guinoclelu ! Oui il fait chaud, mais ce n\'est pas une raison !",
                 "hp": 0
@@ -234,9 +213,7 @@
               {
                 "message": "Wouaw ! Ce champ de force vient de renfoncer notre bouclier ! Génial ! Mai pas le temps de traîner ici, allons-nous-en !",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "Non évidemment t\'a aucune idée comme d\'habitude... Super copilote que j\'ai là ! Bon, laisse moi faire alors.",
                 "hp": -1
@@ -249,16 +226,15 @@
                 "message": "Lâcher les débris métalliques et gagner en puissance sur le moteur ? Superbe idée ! T\'es un géni Guinoclelu !",
                 "hp": 1
               }
-            ]
           ]
         }
       ]
     },
     {
-      "id": "lieu_2",
+      "id": "Supermassive Black Hole",
       "event": [
         {
-          "id": "evenement_1",
+          "id": "Face au trou noir que fait-on ?",
           "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
           "actions": [
             {
@@ -275,7 +251,6 @@
             }
           ],
           "answers": [
-            [
               {
                 "message": "OK ! On y v.... aaaaAAAAAHHHHHH... ... ... AAAAAAAAAAaaaaaaaaaahhhh !! Qu'est ce que... Oh non ! Le vaisseau est touché !",
                 "hp": -1
@@ -287,9 +262,7 @@
               {
                 "message": "C\'est partie ! ... ... ... Oh, regarde Guinoclelu, des pièces pour notre vaisseau, attrapons les !",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "OK ! On y v.... aaaaAAAAAHHHHHH... ... ... AAAAAAAAAAaaaaaaaaaahhhh !! Qu'est ce que... Oh non Guinoclelu ! T'aurais pu vomir dans les toilettes !",
                 "hp": 0
@@ -301,9 +274,7 @@
               {
                 "message": "Allons-y Guinoclelu ! Que le destin nous... ... YOUAH ! Un Bizotron X500 ! Une merveille de technologie, ramenons le !",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "Bon... n'y allons pas alors. Attention, des débris sortent du trou noir ! BRRRAAAMMMM BOUM CRASH....",
                 "hp": -1
@@ -316,11 +287,10 @@
                 "message": "Ahah ! Nous avons gagné beaucoup de temps, bravo Guinoclelu !",
                 "hp": 1
               }
-            ]
           ]
         },
         {
-          "id": "evenement_2",
+          "id": "Un Vaisseau étranger",
           "content": "Capitaine, un vaisseau arrive ! Que faisons-nous ?",
           "actions": [
             {
@@ -337,7 +307,6 @@
             }
           ],
           "answers": [
-            [
               {
                 "message": "Il est là ! RATATATATATATATATATATA !!!! BRAM BRAM BRAM CRASH... Non ! Le flanc droit est touché !",
                 "hp": -1
@@ -349,9 +318,7 @@
               {
                 "message": "Guinoclelu ? Qu'est ce que tu fait ? BAAM BAAM BAAM BAAM ! Wouaw ! Tu l'a eu ! Tu es un super tireur ! Foullions l'épave maintenant...",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "*TTTTUUUuuutttttt.... TTTTUUUuuutttttt....* Lâche ce klaxon Guinoclelu ! Pas croyable ça...",
                 "hp": 0
@@ -363,9 +330,7 @@
               {
                 "message": "On a eu raison de faire confiance à cet inconnu, cette yaourtière est vraiment superbe !",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "*TTTTUUUuuutttttt.... TTTTUUUuuutttttt....* On est touché ! *TTTTUUUuuutttttt.... TTTTUUUuuutttttt....*",
                 "hp": -1
@@ -378,11 +343,10 @@
                 "message": "Passage en vitesse lumière dans 3...2...1... C\'est partie !",
                 "hp": 1
               }
-            ]
           ]
         },
         {
-          "id": "evenement_3",
+          "id": "Attaque d'astéroïdes",
           "content": "Un champ d\'asteroïde, droit devant nous ! Il va falloir passer aux commandes Guinoclelu ! Prêt ?",
           "actions": [
             {
@@ -399,7 +363,6 @@
             }
           ],
           "answers": [
-            [
               {
                 "message": "Hop ! Hop ! Holeeee ! Attenti.... *KRRRRRRRRRRRRRRRRRRR* ... ... Bon, et bien il va falloir réparer !",
                 "hp": -1
@@ -411,9 +374,7 @@
               {
                 "message": "EASY ! On est passé comme pa... comme dans du beurre.",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "Hop ! Hop ! Holeeee ! Attenti.... Olalaaaaaaaa ... ... C\'est chauuuud ! ... ... Ok, on a eu de la chance.",
                 "hp": 0
@@ -425,9 +386,7 @@
               {
                 "message": "Trop facile ! Ahah ! Et en plus on a ramasser un gisement de kryptonite. Que demander de plus ?",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "Quelle bien mauvaise idée de passer au travers de ce champ d\'asteroïde, on a perdu un temps fou !",
                 "hp": -1
@@ -440,11 +399,10 @@
                 "message": "Bonne idée d\'avoir contourné ce champ d\'asteroïde. On a évité de mettre le vaisseau en miettes.",
                 "hp": 1
               }
-            ]
           ]
         },
         {
-          "id": "evenement_4",
+          "id": "Esquiver une planète",
           "content": "Une planète à plus de 100 000 degrés ! Nous avons arrêté l\'hyper vitesse trop tôt ! Vite, il faut prendre une décision avant de brûler vife !",
           "actions": [
             {
@@ -461,7 +419,6 @@
             }
           ],
           "answers": [
-            [
               {
                 "message": "Bon sang, l'ail gauche à fondu ! Le réacteur refuse de continuer ! Et ... Je sais qu\'il fait chaud, mais remet tes vêtements Guinoclelu s\'il te plait !",
                 "hp": -1
@@ -473,9 +430,7 @@
               {
                 "message": "Parfait ! Nous avons gagné en vitesse et allons bientôt pouvoir passer en hyper vitesse. Bravo Guinoclelu !",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "Bon sang ! Mais qu\'est ce que tu fou nu dans le vaisseau Guinoclelu ! Oui il fait chaud, mais ce n\'est pas une raison !",
                 "hp": 0
@@ -487,9 +442,7 @@
               {
                 "message": "Wouaw ! Ce champ de force vient de renfoncer notre bouclier ! Génial ! Mai pas le temps de traîner ici, allons-nous-en !",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "Non évidemment t\'a aucune idée comme d\'habitude... Super copilote que j\'ai là ! Bon, laisse moi faire alors.",
                 "hp": -1
@@ -502,16 +455,15 @@
                 "message": "Lâcher les débris métalliques et gagner en puissance sur le moteur ? Superbe idée ! T\'es un géni Guinoclelu !",
                 "hp": 1
               }
-            ]
           ]
         }
       ]
     },
     {
-      "id": "lieu_3",
+      "id": "Supermassive Black Hole",
       "event": [
         {
-          "id": "evenement_1",
+          "id": "Face au trou noir que fait-on ?",
           "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
           "actions": [
             {
@@ -528,7 +480,6 @@
             }
           ],
           "answers": [
-            [
               {
                 "message": "OK ! On y v.... aaaaAAAAAHHHHHH... ... ... AAAAAAAAAAaaaaaaaaaahhhh !! Qu'est ce que... Oh non ! Le vaisseau est touché !",
                 "hp": -1
@@ -540,9 +491,7 @@
               {
                 "message": "C\'est partie ! ... ... ... Oh, regarde Guinoclelu, des pièces pour notre vaisseau, attrapons les !",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "OK ! On y v.... aaaaAAAAAHHHHHH... ... ... AAAAAAAAAAaaaaaaaaaahhhh !! Qu'est ce que... Oh non Guinoclelu ! T'aurais pu vomir dans les toilettes !",
                 "hp": 0
@@ -554,9 +503,7 @@
               {
                 "message": "Allons-y Guinoclelu ! Que le destin nous... ... YOUAH ! Un Bizotron X500 ! Une merveille de technologie, ramenons le !",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "Bon... n'y allons pas alors. Attention, des débris sortent du trou noir ! BRRRAAAMMMM BOUM CRASH....",
                 "hp": -1
@@ -569,11 +516,10 @@
                 "message": "Ahah ! Nous avons gagné beaucoup de temps, bravo Guinoclelu !",
                 "hp": 1
               }
-            ]
           ]
         },
         {
-          "id": "evenement_2",
+          "id": "Un Vaisseau étranger",
           "content": "Capitaine, un vaisseau arrive ! Que faisons-nous ?",
           "actions": [
             {
@@ -590,7 +536,6 @@
             }
           ],
           "answers": [
-            [
               {
                 "message": "Il est là ! RATATATATATATATATATATA !!!! BRAM BRAM BRAM CRASH... Non ! Le flanc droit est touché !",
                 "hp": -1
@@ -602,9 +547,7 @@
               {
                 "message": "Guinoclelu ? Qu'est ce que tu fait ? BAAM BAAM BAAM BAAM ! Wouaw ! Tu l'a eu ! Tu es un super tireur ! Foullions l'épave maintenant...",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "*TTTTUUUuuutttttt.... TTTTUUUuuutttttt....* Lâche ce klaxon Guinoclelu ! Pas croyable ça...",
                 "hp": 0
@@ -616,9 +559,7 @@
               {
                 "message": "On a eu raison de faire confiance à cet inconnu, cette yaourtière est vraiment superbe !",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "*TTTTUUUuuutttttt.... TTTTUUUuuutttttt....* On est touché ! *TTTTUUUuuutttttt.... TTTTUUUuuutttttt....*",
                 "hp": -1
@@ -632,10 +573,9 @@
                 "hp": 1
               }
             ]
-          ]
         },
         {
-          "id": "evenement_3",
+          "id": "Attaque d'astéroïdes",
           "content": "Un champ d\'asteroïde, droit devant nous ! Il va falloir passer aux commandes Guinoclelu ! Prêt ?",
           "actions": [
             {
@@ -652,7 +592,6 @@
             }
           ],
           "answers": [
-            [
               {
                 "message": "Hop ! Hop ! Holeeee ! Attenti.... *KRRRRRRRRRRRRRRRRRRR* ... ... Bon, et bien il va falloir réparer !",
                 "hp": -1
@@ -664,9 +603,7 @@
               {
                 "message": "EASY ! On est passé comme pa... comme dans du beurre.",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "Hop ! Hop ! Holeeee ! Attenti.... Olalaaaaaaaa ... ... C\'est chauuuud ! ... ... Ok, on a eu de la chance.",
                 "hp": 0
@@ -678,9 +615,7 @@
               {
                 "message": "Trop facile ! Ahah ! Et en plus on a ramasser un gisement de kryptonite. Que demander de plus ?",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "Quelle bien mauvaise idée de passer au travers de ce champ d\'asteroïde, on a perdu un temps fou !",
                 "hp": -1
@@ -693,11 +628,10 @@
                 "message": "Bonne idée d\'avoir contourné ce champ d\'asteroïde. On a évité de mettre le vaisseau en miettes.",
                 "hp": 1
               }
-            ]
           ]
         },
         {
-          "id": "evenement_4",
+          "id": "Esquiver une Planète",
           "content": "Une planète à plus de 100 000 degrés ! Nous avons arrêté l\'hyper vitesse trop tôt ! Vite, il faut prendre une décision avant de brûler vife !",
           "actions": [
             {
@@ -714,7 +648,6 @@
             }
           ],
           "answers": [
-            [
               {
                 "message": "Bon sang, l'ail gauche à fondu ! Le réacteur refuse de continuer ! Et ... Je sais qu\'il fait chaud, mais remet tes vêtements Guinoclelu s\'il te plait !",
                 "hp": -1
@@ -726,9 +659,7 @@
               {
                 "message": "Parfait ! Nous avons gagné en vitesse et allons bientôt pouvoir passer en hyper vitesse. Bravo Guinoclelu !",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "Bon sang ! Mais qu\'est ce que tu fou nu dans le vaisseau Guinoclelu ! Oui il fait chaud, mais ce n\'est pas une raison !",
                 "hp": 0
@@ -740,9 +671,7 @@
               {
                 "message": "Wouaw ! Ce champ de force vient de renfoncer notre bouclier ! Génial ! Mai pas le temps de traîner ici, allons-nous-en !",
                 "hp": 1
-              }
-            ],
-            [
+              },
               {
                 "message": "Non évidemment t\'a aucune idée comme d\'habitude... Super copilote que j\'ai là ! Bon, laisse moi faire alors.",
                 "hp": -1
@@ -756,7 +685,6 @@
                 "hp": 1
               }
             ]
-          ]
         }
       ]
     }

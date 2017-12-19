@@ -22,13 +22,13 @@ public class Event implements Parcelable {
     private ArrayList<Action> actions;
 
     @SerializedName("answers")
-    ArrayList<ArrayList<Answer>> answers;
+    private ArrayList<Answer> answers;
 
     protected Event(Parcel in) {
         id = in.readString();
         content = in.readString();
         actions = in.createTypedArrayList(Action.CREATOR);
-        //in.readList(answers, getClass().getClassLoader());
+        answers = in.createTypedArrayList(Answer.CREATOR);
     }
 
     @Override
@@ -36,7 +36,7 @@ public class Event implements Parcelable {
         dest.writeString(id);
         dest.writeString(content);
         dest.writeTypedList(actions);
-        //dest.writeList(answers);
+        dest.writeTypedList(answers);
     }
 
     @Override
@@ -80,14 +80,14 @@ public class Event implements Parcelable {
         this.actions = actions;
     }
 
-    public ArrayList<ArrayList<Answer>> getAnswers() {
+    public ArrayList<Answer> getAnswers() {
         return answers;
     }
 
-    public void setAnswers(ArrayList<ArrayList<Answer>> answers) {
+    public void setAnswers(ArrayList<Answer> answers) {
         this.answers = answers;
     }
-    
+
     @Override
     public String toString() {
         return "Event{" +
