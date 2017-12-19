@@ -80,7 +80,7 @@ public class ShowPersoActivity extends AppCompatActivity {
                         tvInventory.append("\n" + u.getInventory().get(j) + "\n");
                     }
                 }else{
-                    tvInventory.append("\n Inventory is empty");
+                    tvInventory.append("Inventory is empty");
                 }
             }
 
