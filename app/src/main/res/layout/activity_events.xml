@@ -64,42 +64,33 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center|bottom">
+            <Button
+                android:id="@+id/action1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:theme="@style/RedActionStyle"
+                android:text="Action1" />
+            <Button
+                android:id="@+id/action2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:theme="@style/DirectionStyle"
+                android:layout_below = "@id/action1"
+                android:text="Action2" />
+            <Button
+                android:id="@+id/action3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below = "@id/action2"
+                android:theme="@style/SubmitStyle"
+                android:text="Action3" />
+    </RelativeLayout>
 
-        <Button
-            android:id="@+id/action1"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:gravity="center_horizontal"
-            android:text="Action1" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-
-        <Button
-            android:id="@+id/action2"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:gravity="center_horizontal"
-            android:text="Action2" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-
-        <Button
-            android:id="@+id/action3"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:gravity="center_horizontal"
-            android:text="Action3" />
-    </LinearLayout>
 </LinearLayout>
