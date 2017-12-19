@@ -39,8 +39,10 @@ public class FirebaseUtils {
 
     }
 
-    public static void createPerso(String username, /*final InputStream avatar,*/ String gender, String race, final OnCompleteListener listener) {
+    public static void createPerso(User u, String username, /*final InputStream avatar,*/ String gender, String race, final OnCompleteListener listener) {
             final User user = new User();
+            user.setName(u.name);
+            user.setEmail(u.email);
             user.setUsername(username);
             user.setGender(gender);
             user.setRace(race);

@@ -32,6 +32,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 
 
 public class PersoActivity extends AppCompatActivity {
@@ -48,6 +49,8 @@ public class PersoActivity extends AppCompatActivity {
     private RadioGroup rgRace;
     private String radioGenderValue;
     private String radioRaceValue;
+    private User user;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +93,7 @@ public class PersoActivity extends AppCompatActivity {
 
     private void createPerso(String username, /*InputStream avatar,*/ String gender, String race) {
         showLoading(true);
-        FirebaseUtils.createPerso(username, /*avatar,*/ gender, race, new OnCompleteListener() {
+        FirebaseUtils.createPerso(user, username, /*avatar,*/ gender, race, new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull Task task) {
                 if (task.isSuccessful()) {
@@ -115,6 +118,7 @@ public class PersoActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 User u = dataSnapshot.getValue(User.class);
+                user = u;
                 username = u.getUsername();
                 //avatar = u.getAvatar();
                 gender = u.getGender();
