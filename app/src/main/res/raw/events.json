@@ -117,7 +117,7 @@
           ]
         },
         {
-          "id": "Attaque d'astétoïdes",
+          "id": "La ceinture de Kuiper, pas des astéroïdes...Mais qu'en sait Guinoclelu",
           "content": "Un champ d\'asteroïde, droit devant nous ! Il va falloir passer aux commandes Guinoclelu ! Prêt ?",
           "actions": [
             {
@@ -173,7 +173,7 @@
           ]
         },
         {
-          "id": "Éviter la planète",
+          "id": "Sortie du système solaire, face à une planète d'Andromeda...Ou serait-ce une étoile ?",
           "content": "Une planète à plus de 100 000 degrés ! Nous avons arrêté l\'hyper vitesse trop tôt ! Vite, il faut prendre une décision avant de brûler vife !",
           "actions": [
             {
@@ -231,10 +231,10 @@
       ]
     },
     {
-      "id": "Supermassive Black Hole",
+      "id": "Sagittarius A*",
       "event": [
         {
-          "id": "Face au trou noir que fait-on ?",
+          "id": "Le fameux trou noir au centre même de notre système solaire...",
           "content": "Vous arrivez face à un trou noir... Guinoclelu n'est pas rassuré à l'idée d'y entrer. Et vous ? Savez-vous ce qu'est un trou noir d'ailleurs ?",
           "actions": [
             {
@@ -346,7 +346,7 @@
           ]
         },
         {
-          "id": "Attaque d'astéroïdes",
+          "id": "Arriver à la ceinture d'astéroïdes de notre système solaire",
           "content": "Un champ d\'asteroïde, droit devant nous ! Il va falloir passer aux commandes Guinoclelu ! Prêt ?",
           "actions": [
             {
@@ -402,7 +402,7 @@
           ]
         },
         {
-          "id": "Esquiver une planète",
+          "id": "Esquiver la planète Mercure et sa fameuse trajectoire divergente ! ",
           "content": "Une planète à plus de 100 000 degrés ! Nous avons arrêté l\'hyper vitesse trop tôt ! Vite, il faut prendre une décision avant de brûler vife !",
           "actions": [
             {
@@ -460,7 +460,7 @@
       ]
     },
     {
-      "id": "Supermassive Black Hole",
+      "id": "S5 0014+813",
       "event": [
         {
           "id": "Face au trou noir que fait-on ?",

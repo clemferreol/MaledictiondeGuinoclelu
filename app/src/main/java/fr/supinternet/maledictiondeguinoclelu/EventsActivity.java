@@ -23,6 +23,7 @@ public class EventsActivity extends AppCompatActivity {
     private Button action1;
     private Button action2;
     private Button action3;
+    private Button backButton;
 
     public static final String STRING_KEY = "Lieu_list";
 
@@ -43,6 +44,7 @@ public class EventsActivity extends AppCompatActivity {
         action1 = (Button) findViewById(R.id.action1);
         action2 = (Button) findViewById(R.id.action2);
         action3 = (Button) findViewById(R.id.action3);
+        backButton = (Button) findViewById(R.id.BACKBUTTON);
 
         Place place = getIntent().getParcelableExtra(STRING_KEY);
 
@@ -136,6 +138,14 @@ public class EventsActivity extends AppCompatActivity {
                             })
                             .setIcon(android.R.drawable.ic_dialog_alert)
                             .show();
+                }
+            });
+            backButton.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    Intent intent = new Intent(EventsActivity.this, GameActivity.class);
+                    startActivity(intent);
+
                 }
             });
             break;
