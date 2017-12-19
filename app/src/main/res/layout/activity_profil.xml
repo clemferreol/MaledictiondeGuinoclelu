@@ -38,14 +38,16 @@
         android:id="@+id/update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/DirectionStyle"
+
+        android:background="#00ffae"
         android:text="Update Profile" />
 
     <Button
         android:id="@+id/logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/RedActionStyle"
+
+        android:background="#FFA000"
         android:text="LogOut" />
 
 </LinearLayout>

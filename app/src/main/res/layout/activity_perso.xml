@@ -89,13 +89,11 @@
             android:id="@+id/play"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:theme="@style/SubmitStyle"
             android:text="Play"></Button>
         <Button
             android:id="@+id/update"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:theme="@style/DirectionStyle"
             android:text="Update Perso"></Button>
     </LinearLayout>
 

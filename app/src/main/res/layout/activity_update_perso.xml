@@ -109,7 +109,6 @@
             android:id="@+id/btUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:theme="@style/DirectionStyle"
             android:text="Update it"/>
     </RelativeLayout>
 
