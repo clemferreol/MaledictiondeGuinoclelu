@@ -1,14 +1,13 @@
 package fr.supinternet.maledictiondeguinoclelu;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -17,19 +16,19 @@ import java.util.ArrayList;
  */
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
-    private ArrayList<Model.Lieu> arrayLieu = new ArrayList<>();
+    private ArrayList<Place> arrayPlaces = new ArrayList<>();
 
     private Context context;
 
-    public Adapter(Context context, ArrayList<Model.Lieu> places) {
+    public Adapter(Context context, ArrayList<Place> places) {
 
         this.context = context;
-        this.arrayLieu = places;
+        this.arrayPlaces = places;
     }
 
     @Override
     public int getItemCount() {
-        return arrayLieu.size();
+        return (arrayPlaces.size());
     }
 
     @Override
@@ -39,8 +38,20 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(Adapter.ViewHolder holder, int position) {
-        holder.lieu.setText(arrayLieu.get(position).getId());
+    public void onBindViewHolder(final Adapter.ViewHolder holder, final int position) {
+        holder.lieu.setText(arrayPlaces.get(position).getId());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                EventsActivity.startActivity(context, arrayPlaces.get(holder.getAdapterPosition()));
+                /*Intent intent = new Intent(view.getContext(), EventsActivity.class);
+                intent.putExtra(EventsActivity.STRING_KEY, arrayPlaces.get(holder.getAdapterPosition()));
+                view.getContext().startActivity(intent);*/
+            }
+        });
+
     }
 
 
