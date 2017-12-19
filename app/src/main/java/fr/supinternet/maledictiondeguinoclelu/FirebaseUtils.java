@@ -57,6 +57,26 @@ public class FirebaseUtils {
 
     }
 
+    public static void updatePerso(User u, String username, /*final InputStream avatar,*/ String gender, String race, final OnCompleteListener listener) {
+            final User user = new User();
+            user.setName(u.name);
+            user.setEmail(u.email);
+            user.setUsername(username);
+            user.setGender(gender);
+            user.setRace(race);
+            String key = getRef().child("users").push().getKey();
+            //sendAvatarStream(avatar, key);
+
+            getRef().child("users").child(getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    getRef().child("users").child(getUid()).setValue(user);
+                    listener.onComplete(task);
+                }
+            });
+
+    }
+
     private static void sendAvatarStream(InputStream image, final String key){
         StorageReference imageref = FirebaseStorage.getInstance().getReference().child("images/" + key + ".jpg");
 

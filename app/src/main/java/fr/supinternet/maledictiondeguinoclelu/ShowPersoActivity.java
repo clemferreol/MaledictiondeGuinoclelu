@@ -24,6 +24,7 @@ public class ShowPersoActivity extends AppCompatActivity {
     protected String race;
     private View loading;
     private Button play;
+    private Button update;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,12 +35,21 @@ public class ShowPersoActivity extends AppCompatActivity {
         tvGender = (TextView) findViewById(R.id.profil_gender);
         tvRace = (TextView) findViewById(R.id.profil_race);
         play = (Button) findViewById(R.id.play);
+        update = (Button) findViewById(R.id.update);
         setDataToView();
 
         play.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(ShowPersoActivity.this, GameActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        update.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(ShowPersoActivity.this, UpdatePersoActivity.class);
                 startActivity(intent);
             }
         });

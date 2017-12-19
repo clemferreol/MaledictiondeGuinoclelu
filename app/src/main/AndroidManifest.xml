@@ -20,7 +20,8 @@
         <activity android:name=".PersoActivity" />
         <activity android:name=".ShowPersoActivity" />
         <activity android:name=".GameActivity" />
-        <activity android:name=".EventsActivity"></activity>
+        <activity android:name=".EventsActivity" />
+        <activity android:name=".UpdatePersoActivity" />
     </application>
 
 </manifest>

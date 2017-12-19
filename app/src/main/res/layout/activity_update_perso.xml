@@ -4,26 +4,26 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/title_create_perso"
+        android:id="@+id/title_update_perso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="26sp"
         android:layout_marginTop="30dp"
         android:layout_alignParentTop="true"
         android:gravity="center_horizontal"
-        android:text="Create your character"/>
+        android:text="Update your character"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp">
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/lCreateUsername"
+            android:id="@+id/lUpdateUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/etCreateUsername"
+                android:id="@+id/etUpdateUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter username"
@@ -41,15 +41,15 @@
             android:id="@+id/radioGender">
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/gender_male"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Male"
-                android:layout_below="@+id/lCreateUsername"
+                android:layout_below="@+id/lUpdateUsername"
                 android:layout_toEndOf="@+id/loading" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/gender_female"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Female"
@@ -72,7 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Human"
-                android:layout_below="@+id/lCreateUsername"
+                android:layout_below="@+id/lUpdateUsername"
                 android:layout_toEndOf="@+id/loading" />
 
             <RadioButton
@@ -88,7 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Elfe"
-                android:layout_below="@+id/lCreateUsername"
+                android:layout_below="@+id/lUpdateUsername"
                 android:layout_toEndOf="@+id/loading" />
 
             <RadioButton
@@ -106,10 +106,10 @@
         android:layout_height="match_parent"
         android:layout_marginTop="390dp">
         <Button
-            android:id="@+id/btCreate"
+            android:id="@+id/btUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Create it"/>
+            android:text="Update it"/>
     </RelativeLayout>
 
     <LinearLayout
