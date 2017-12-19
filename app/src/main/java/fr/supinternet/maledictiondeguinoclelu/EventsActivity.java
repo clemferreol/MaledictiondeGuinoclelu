@@ -88,6 +88,9 @@ public class EventsActivity extends AppCompatActivity {
                                     if(answer.getHp() == 0){
                                         hp.setText(String.valueOf(intbut + 0));
                                     }
+                                    if(answer.getHp() == -1){
+                                        hp.setText(String.valueOf(intbut + -1));
+                                    }
 
                                     Intent intent = getIntent();
                                     finish();
@@ -106,7 +109,7 @@ public class EventsActivity extends AppCompatActivity {
                 public void onClick(View v){
                     Random rn = new Random();
                     int random = rn.nextInt(8 - 0 + 1) + 0;
-                    Answer answer = event.getAnswers().get(random);
+                    final Answer answer = event.getAnswers().get(random);
                     AlertDialog.Builder builder;
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                         builder = new AlertDialog.Builder(EventsActivity.this, android.R.style.Theme_Material_Dialog_Alert);
@@ -117,6 +120,15 @@ public class EventsActivity extends AppCompatActivity {
                             .setMessage(answer.getMessage() + "\n" + "Votre HP : " + answer.getHp())
                             .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
+                                    if(answer.getHp() == 1){
+                                        hp.setText(String.valueOf(intbut + 1));
+                                    }
+                                    if(answer.getHp() == 0){
+                                        hp.setText(String.valueOf(intbut + 0));
+                                    }
+                                    if(answer.getHp() == -1){
+                                        hp.setText(String.valueOf(intbut + -1));
+                                    }
                                     Intent intent = getIntent();
                                     finish();
                                     startActivity(intent);
@@ -133,7 +145,7 @@ public class EventsActivity extends AppCompatActivity {
                 public void onClick(View v){
                     Random rn = new Random();
                     int random = rn.nextInt(8 - 0 + 1) + 0;
-                    Answer answer = event.getAnswers().get(random);
+                    final Answer answer = event.getAnswers().get(random);
                     AlertDialog.Builder builder;
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                         builder = new AlertDialog.Builder(EventsActivity.this, android.R.style.Theme_Material_Dialog_Alert);
@@ -144,6 +156,16 @@ public class EventsActivity extends AppCompatActivity {
                             .setMessage(answer.getMessage() + "\n" + "Votre HP : " + answer.getHp())
                             .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
+                                    if(answer.getHp() == 1){
+                                        hp.setText(String.valueOf(intbut + 1));
+                                    }
+                                    if(answer.getHp() == 0){
+                                        hp.setText(String.valueOf(intbut + 0));
+                                    }
+                                    if(answer.getHp() == -1){
+                                        hp.setText(String.valueOf(intbut + -1));
+                                    }
+                                    
                                     Intent intent = getIntent();
                                     finish();
                                     startActivity(intent);
