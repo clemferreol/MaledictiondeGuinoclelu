@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:background="#00ffae"
+        aandroid:theme="@style/DirectionStyle"
         android:text="Update Profile" />
 
     <Button
@@ -47,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:background="#FFA000"
+        android:theme="@style/RedActionStyle"
         android:text="LogOut" />
 
 </LinearLayout>

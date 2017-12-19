@@ -8,6 +8,7 @@
     <android.support.design.widget.TextInputLayout
         android:id="@+id/lSignupName"
         android:layout_width="match_parent"
+        android:theme="@style/InputStyle"
         android:layout_height="wrap_content">
 
         <EditText
@@ -20,6 +21,7 @@
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/lSignupEmail"
+        android:theme="@style/InputStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/lSignupName">
@@ -36,6 +38,7 @@
         android:id="@+id/lSignupPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/InputStyle"
         android:layout_below="@id/lSignupEmail"
         app:passwordToggleEnabled="true">
 
@@ -50,6 +53,7 @@
 
     <Button
         android:id="@+id/btSignup"
+        android:theme="@style/SubmitStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lSignupPassword"

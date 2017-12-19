@@ -107,6 +107,7 @@
         android:layout_marginTop="390dp">
         <Button
             android:id="@+id/btUpdate"
+            android:theme="@style/DirectionStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Update it"/>
